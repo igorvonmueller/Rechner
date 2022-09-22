@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Rechner</title>
+    <style>
+        * {
+            margin: 0
+            box-sizing: border-box;
+        }
+
+        body {
+            border: 10px solid red;
+            min-height: 100vh;
+            background: black;
+            color: white;
+            display: grid;
+            place-items: center;
+        }
+
+        section {
+            background: rgba(red, green, blue, alpha);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Rechner</h1>
+        <p id="resultado"></p>
+        <button onclick="Vergrossern()">Plus</button>
+        <button onclick="Einschranken()">Minus</button>
+    </section>
+    <script>
+
+        // Estado da minha aplicação.
+        
+        let Nummer = 0;
+
+        // Alteradores de estados da aplicação.
+        function Vergrossern() {
+            Nummer++
+            AufSchirmDruecken()
+        }
+
+        function Einschranken(){
+            Nummer--
+            AufSchirmDruecken()
+        }
+
+        // Jogar o estado da aplicação na tela.
+        function AufSchirmDruecken() {
+            const p = document.querySelector("#resultado")
+            p.innerText = Nummer
+        }
+
+        // Iniciar.
+        AufSchirmDruecken()
+    </script>   
+</body>
+</html>
