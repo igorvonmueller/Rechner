@@ -39,10 +39,10 @@
 <body>
     <section>
         <h1>Rechner</h1>
-        <p id="resultado"></p>
+        <p id="Resultat"></p>
         <button onclick="Vergrossern()">Plus</button>
         <button onclick="Einschranken()">Minus</button>
-        <button onclick="Zerar()">Zerar</button>
+        <button onclick="Null()">Null</button>
     </section>
     <script>
 
@@ -61,15 +61,15 @@
             AufSchirmDruecken()
         }
 
-        function Zerar(){
+        function Null(){
             Nummer -= Nummer;
-            console.log('kkk')
+            console.log('KKK')
             AufSchirmDruecken()
         }
 
         // Jogar o estado da aplicação na tela.
         function AufSchirmDruecken() {
-            const p = document.querySelector("#resultado")
+            const p = document.querySelector("#Resultat")
             p.innerText = Nummer
         }
 
