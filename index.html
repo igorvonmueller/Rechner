@@ -35,6 +35,7 @@
         <p id="resultado"></p>
         <button onclick="Vergrossern()">Plus</button>
         <button onclick="Einschranken()">Minus</button>
+        <button onclick="Zerar()">Zerar</button>
     </section>
     <script>
 
@@ -50,6 +51,11 @@
 
         function Einschranken(){
             Nummer--
+            AufSchirmDruecken()
+        }
+
+        function Zerar(){
+            Nummer = Nummer;
             AufSchirmDruecken()
         }
 
