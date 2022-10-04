@@ -1,3 +1,3 @@
 # Zahler
  
-https://mein-rechner.netlify.app/
+https://zahler.netlify.app/
